@@ -15,6 +15,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style_main.css">
     <link rel=" stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style_contact.css">
 
     <!-- SCRIPTS -->
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
@@ -31,7 +32,7 @@
             <div class="header-img">
             </div>
             <!-- BARRA DE NAVEGACION -->
-            <nav class="content-nav">
+            <nav class="content-nav" id="navbar">
                 <ul class="menu">
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="./habitaciones.html">Habitaciones</a></li>
@@ -51,19 +52,109 @@
 
     <!-- INICIO DEL MAIN -->
 
-    <div class="maindiv">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt temporibus animi accusantium
-        id. Expedita est nulla ullam, dicta neque, eaque sunt voluptatem laborum accusamus voluptas, ipsum voluptates
-        doloribus ad.</div>
-    <div class="maindiv">Tenetur impedit nemo aperiam totam nisi quos, odio eveniet enim in est accusantium ipsum
-        repudiandae repellat officia fugiat quae nihil dolore ducimus, corporis, molestias quia provident architecto.
-        Architecto, veniam rerum.</div>
-    <div class="maindiv">Dolorum, numquam. Magnam eligendi voluptas, aliquam velit modi natus quaerat quasi? Excepturi
-        ipsum, provident laboriosam, modi nihil similique magnam in odio porro quas aliquid minima incidunt aut tenetur
-        sunt rerum!</div>
-    <div class="maindiv">Debitis placeat ut cum et ex officia quaerat sint necessitatibus reiciendis odit nesciunt,
-        provident culpa dolorem beatae, minima doloribus, eius blanditiis omnis. Possimus distinctio atque, minima
-        quibusdam necessitatibus quo animi.</div>
-    <!-- FINAL DEL MAIN -->
+    <section class="contenedor-contacto">
+        <div class="contenedor-banner">
+            <div class="contenedor-banner-teximg">
+                <h1>CONTACTA CON NOSOTROS</h1>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="contacus">
+            <div class="caja">
+                <!--contenedor de formulario de contacto-->
+                <div class="contac form">
+                    <h3>Enviar un mensaje</h3>
+                    <form action="#">
+                        <div class="formBox">
+                            <div class="rows">
+                                <div class="inputBox">
+                                    <span>Nombre</span>
+                                    <input required type="text" placeholder="Brayan" id="nombre">
+                                </div>
+                                <div class="inputBox">
+                                    <span>Apellido</span>
+                                    <input required type="text" placeholder="Peña" id="apellido">
+                                </div>
+                            </div>
+                            <div class="rows">
+                                <div class="inputBox">
+                                    <span>Correo</span>
+                                    <input required type="email" placeholder="brayanjp@gmail.com" id="correo">
+                                </div>
+                                <div class="inputBox">
+                                    <span>Telefono</span>
+                                    <input required type="tel" placeholder="99889988" id="telefono">
+                                </div>
+                            </div>
+                            <div class="rowsfull">
+                                <div class="inputBox">
+                                    <span>Mensaje</span>
+                                    <textarea required id="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+                                </div>
+                            </div>
+                            <div class="rowsfull">
+                                <div class="inputBox">
+                                    <input type="submit" value="Enviar">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--contenedor de informacion de contacto-->
+                <div class="contac info">
+                    <!-- PRIMERA SECCION -->
+                    <h3>Antes de contactar con nosotros</h3>
+                    <p>Por favor, lea nuestras preguntas frecuentes antes de contactarnos. Es posible que su pregunta ya
+                        haya sido respondida. Tambien es indespensable que coloque todos sus datos de manera correcta,
+                        asi podremos hacerle llegar las respuestas a su duda con la mayor rapidez posible.</p>
+                    <!-- SEGUNDA SECCION -->
+                    <!-- <br><br> -->
+                    <h3>Información de contacto</h3>
+                    <div class="infobox">
+                        <div>
+                            <span><i class="fa-solid fa-location-dot" name="location"></i></span>
+                            <p>184 Main Collins Street West Victoria 8007</p>
+                        </div>
+                        <div>
+                            <span><i class="fa-solid fa-phone" name="call"></i></span>
+                            <a href="tel:+1800-222-222">+1800-222-222</a>
+                        </div>
+                        <div>
+                            <span><i class="fa-solid fa-envelope" name="mail"></i></span>
+                            <a href="mailto:contact@versatilewptheme.com"> contact@versatilewptheme.com</a>
+                        </div>
+                        <div>
+                            <span><i class="fa-regular fa-clock" name="hours"></i></span>
+                            <p>Todos los dias 9:00-17:00</p>
+                        </div>
+                        <!-- TERCERA SECCION -->
+                        <!-- REDES SOCIALES -->
+                        <br>
+                        <h3>Redes sociales</h3>
+                        <ul class="redes-contact">
+                            <li><a href="#"> <i class="fab fa-facebook-square"></i></a></li>
+                            <li><a href="#"> <i class="fa-brands fa-square-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="contac mapa">
+                    <!-- <h3>Ubicación(mapa)</h3> -->
+                    <div class="infobox">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.3780000000003!2d-77.04238968577538!3d-12.119999991421479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910c0f0f4b0b0b0b%3A0x1b3b2b2b2b2b2b2b!2sHotel%20El%20Carmen!5e0!3m2!1ses!2spe!4v1600000000000!5m2!1ses!2spe"
+                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 
@@ -100,6 +191,6 @@
         <p>Todos los derechos reservados © 2022 <b>Hotel Master</b></p>
     </div>
 </footer>
-
+<script src="../js/fijar.js"></script>
 
 </html>

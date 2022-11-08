@@ -28,6 +28,19 @@
 
 /* COMIENZO DE LOS ESTILOS PARA LA BARRA DE NAVEGACION */
 
+.fijar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: #7a7a7a 0px 0px 10px;
+}
+
+.fijar * .maindiv {
+    padding-top: 60px;
+}
+
+
 .content-nav {
     width: 100%;
     background-color: #080808;
@@ -35,6 +48,7 @@
     align-items: center;
     text-align: center;
     height: auto;
+    z-index: 1;
     /* box-shadow: 0 10px 10px rgba(0, 0, 0, 0.24); */
 }
 
@@ -52,7 +66,9 @@
     padding: 10px 20px;
     color: #a5a5a5;
     letter-spacing: 2px;
-    font-family: var(--fuente_1);
+    font-family: var(--fuente_2);
+    text-transform: uppercase;
+    /* el text transform agregado */
     text-decoration: none;
 }
 
@@ -68,6 +84,10 @@
     visibility: hidden;
     opacity: 0;
     transition: opacity .8s ease-in-out;
+    text-transform: uppercase;
+    /* el text transform agregado */
+    z-index: 1;
+    /* nuevo agregado el z-index */
 }
 
 .sub-menu li a {
