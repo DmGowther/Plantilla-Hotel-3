@@ -388,3 +388,168 @@ hr{
 }
 
 /*FINAL DEL TESTIMONIAL  */
+
+
+/* INICIO DEL GALERY ROOMS */
+
+
+.contenedor-img-slider {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #434446;
+    /* height: 350px; */
+    height: auto;
+    font-family: var(--fuente_2);
+    padding-bottom: 20px;
+}
+
+.center {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.center>h1 {
+    letter-spacing: 2px;
+    color: aliceblue;
+}
+
+.center>h4 {
+    font-family: var(--fuente_3);
+    color: #b89f80;
+    margin-bottom: 25px;
+    transition: all 300ms linear;
+}
+
+.center>h4:hover {
+    color: #aa9479;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    grid-gap: 16px;
+    overflow: hidden;
+    width: 1200px;
+}
+
+.wrapper>.inner {
+    display: flex;
+    grid-gap: 16px;
+    transition: all 1s ease-in-out;
+}
+
+.card {
+    /* border-radius: 8px; */
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    transition: all 800ms;
+    animation-name: tarjeta_dez;
+    animation-duration: 30s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    transform: translate3d(0, 0, 0);
+    transform: all 600ms;
+    width: 284px;
+    overflow: hidden;
+}
+
+@keyframes tarjeta_dez {
+    0% {
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+
+    15% {
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+
+    20% {
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+
+    35% {
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+
+    40% {
+        transform: translate3d(calc(-100% * 2.1), 0, 0);
+    }
+
+    55% {
+        transform: translate3d(calc(-100% * 2.1), 0, 0);
+    }
+
+    60% {
+        transform: translate3d(calc(-100% * 3.15), 0, 0);
+    }
+
+    75% {
+        transform: translate3d(calc(-100% * 3.15), 0, 0);
+    }
+
+    80% {
+        transform: translate3d(calc(-100% * 4.2), 0, 0);
+    }
+
+    100% {
+        transform: translate3d(calc(-100% * 4.2), 0, 0);
+    }
+}
+
+.card>img {
+    display: block;
+    object-fit: cover;
+    width: auto;
+    transform: scale(1);
+    transition: all 300ms ease-out;
+}
+
+.card>img:hover {
+    width: 284px;
+    transform: scale(1.1);
+    filter: brightness(0.8);
+    cursor: pointer;
+}
+
+.card>.content {
+    background: #0a2640;
+    padding: 16px;
+    text-align: center;
+}
+
+.card>.content>h1,
+.card>.content>h3 {
+    margin: 5px 0;
+}
+
+.card>.content>h1 {
+    font-family: var(--fuente_2);
+    color: #b89f80;
+    font-size: 1.25rem;
+    transition: all 400ms linear;
+    line-height: 1;
+}
+
+.card>.content>h1:hover {
+    color: #dad6d1;
+    cursor: pointer;
+}
+
+.card>.content>h3 {
+    font-family: var(--fuente_3);
+    color: #ccc;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.card>.content>h3:hover {
+    cursor: pointer;
+}
+
+/* FINAL DEL GALERY ROOMS */
