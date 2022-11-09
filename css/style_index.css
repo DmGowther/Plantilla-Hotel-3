@@ -316,9 +316,10 @@ input[id="3"]:checked~.pagina .item-pagina[for="3"] {
     flex-direction: column;
     justify-content: center;
     background: #434446;
-    height: 350px;
+    /* height: 350px; */
+    height: auto;
     font-family: var(--fuente_2);
-    margin-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 .center {
@@ -333,13 +334,12 @@ input[id="3"]:checked~.pagina .item-pagina[for="3"] {
 .center>h1 {
     letter-spacing: 2px;
     color: aliceblue;
-    margin-bottom: -10px;
 }
 
 .center>h4 {
-    /* letra 3 */
+    font-family: var(--fuente_3);
     color: #b89f80;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     transition: all 300ms linear;
 }
 
@@ -352,7 +352,7 @@ input[id="3"]:checked~.pagina .item-pagina[for="3"] {
     display: flex;
     grid-gap: 16px;
     overflow: hidden;
-    width: 1184px;
+    width: 1200px;
 }
 
 .wrapper>.inner {
@@ -362,16 +362,17 @@ input[id="3"]:checked~.pagina .item-pagina[for="3"] {
 }
 
 .card {
-    border-radius: 8px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    /* border-radius: 8px; */
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
     transition: all 800ms;
     animation-name: tarjeta_dez;
-    animation-duration: 12s;
+    animation-duration: 30s;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     transform: translate3d(0, 0, 0);
     transform: all 600ms;
+    width: 284px;
     overflow: hidden;
 }
 
@@ -380,38 +381,60 @@ input[id="3"]:checked~.pagina .item-pagina[for="3"] {
         transform: translate3d(calc(-100% * 0), 0, 0);
     }
 
-    35% {
+    15% {
         transform: translate3d(calc(-100% * 0), 0, 0);
     }
 
-    40% {
+    20% {
         transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+
+    35% {
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+
+    40% {
+        transform: translate3d(calc(-100% * 2.1), 0, 0);
+    }
+
+    55% {
+        transform: translate3d(calc(-100% * 2.1), 0, 0);
+    }
+
+    60% {
+        transform: translate3d(calc(-100% * 3.15), 0, 0);
     }
 
     75% {
-        transform: translate3d(calc(-100% * 1), 0, 0);
+        transform: translate3d(calc(-100% * 3.15), 0, 0);
     }
 
     80% {
-        transform: translate3d(calc(-100% * 2), 0, 0);
+        transform: translate3d(calc(-100% * 4.2), 0, 0);
     }
 
     100% {
-        transform: translate3d(calc(-100% * 2), 0, 0);
+        transform: translate3d(calc(-100% * 4.2), 0, 0);
     }
 }
 
 .card>img {
-    border-bottom-right-radius: inherit;
-    border-top-left-radius: inherit;
     display: block;
-    width: 280px;
+    object-fit: cover;
+    width: auto;
+    transform: scale(1);
+    transition: all 300ms ease-out;
+}
+
+.card>img:hover {
+    width: 284px;
+    transform: scale(1.1);
+    filter: brightness(0.8);
+    cursor: pointer;
 }
 
 .card>.content {
     background: #0a2640;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
     padding: 16px;
     text-align: center;
 }
@@ -422,18 +445,20 @@ input[id="3"]:checked~.pagina .item-pagina[for="3"] {
 }
 
 .card>.content>h1 {
+    font-family: var(--fuente_2);
     color: #b89f80;
     font-size: 1.25rem;
+    transition: all 400ms linear;
     line-height: 1;
 }
 
 .card>.content>h1:hover {
     color: #dad6d1;
-    transition: all 300ms linear;
     cursor: pointer;
 }
 
 .card>.content>h3 {
+    font-family: var(--fuente_3);
     color: #ccc;
     font-size: 0.9rem;
     font-weight: 300;
