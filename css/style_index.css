@@ -158,23 +158,28 @@ input[id="3"]:checked~.pagina .item-pagina[for="3"] {
     height: 160px;
     box-sizing: border-box;
 }
-form{
+
+form {
     display: flex;
     position: relative;
     justify-content: center;
 }
-.rows{
+
+.rows {
     padding: 10px;
     margin-top: 30px;
 }
-.inputBox{
+
+.inputBox {
     padding-top: 10px;
 }
-span{
+
+span {
     color: #fff;
     font-family: var(--fuente_1);
 }
-select{
+
+select {
     background-color: #5f5243;
     width: 100px;
     height: 40px;
@@ -182,19 +187,23 @@ select{
     border: none;
 
 }
-input{
-    background-color:#5f5243;
+
+input {
+    background-color: #5f5243;
     width: 230px;
     height: 40px;
     color: #fff;
     border: none;
 }
+
 .inputbutton {
     padding-top: 28px;
 }
-.buttonc{
+
+.buttonc {
     background-color: #aa8667;
 }
+
 /*FINAL DEL FORM DE RESERVACION  */
 
 /*INICIO DE HABITACION*/
@@ -219,10 +228,12 @@ input{
     color: #fff;
     margin-top: 40px;
 }
-.img-hab{
+
+.img-hab {
     width: 500px;
     height: 180px;
 }
+
 .column h4 {
     text-align: center;
     padding-bottom: 0px;
@@ -230,7 +241,7 @@ input{
     font-family: var(--fuente_2);
 }
 
-hr{
+hr {
     background-color: #aa8667;
     width: 40px;
     height: 1px;
@@ -238,11 +249,13 @@ hr{
     margin-top: 20px;
     margin-left: 150px;
 }
+
 .column p {
     color: #a5a5a5;
     text-align: center;
     margin-top: 20px;
 }
+
 /*FINAL DE HABITACION*/
 
 /* PARA EL TESTIMONIAL */
@@ -399,11 +412,12 @@ hr{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #434446;
+    background: #1E1E1E;
     /* height: 350px; */
     height: auto;
     font-family: var(--fuente_2);
     padding-bottom: 20px;
+    border-bottom: #292929 2px solid;
 }
 
 .center {
@@ -518,7 +532,7 @@ hr{
 }
 
 .card>.content {
-    background: #0a2640;
+    background: #292929;
     padding: 16px;
     text-align: center;
 }
