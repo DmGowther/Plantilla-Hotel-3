@@ -1,40 +1,58 @@
-.body{
-    display:flex ;
+:root {
+    --fuente_1: 'Merriweather', serif;
+    --fuente_2: 'Open Sans', sans-serif;
+    --fuente_3: 'Fira Sans Condensed', sans-serif;
+}
+
+body {
+    background-color: #0a0a0a;
+}
+
+.body-slider {
+    margin-top: 3px;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    z-index: 0;
 }
 
-img{
+img {
     max-width: 100%;
     background-size: cover;
 }
 
-.contenedor_principal{
+.contenedor_principal {
     position: relative;
     overflow: hidden;
     width: 100%;
+    height: 450px;
     max-width: 3000px;
 }
-.slide{
+
+.slide {
     display: flex;
     transition: all 600ms;
     animation-name: slide;
-    animation-duration: 6.5s;
+    animation-duration: 12s;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
+    height: 450px;
 }
-.item-slide{
+
+.item-slide {
     position: relative;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     flex-grow: 0;
     max-width: 100%;
+    height: 450px;
 }
-.pagina{
+
+.pagina {
     position: absolute;
     bottom: 20px;
     left: 0;
@@ -44,7 +62,8 @@ img{
     justify-content: center;
     width: 100%;
 }
-.item-pagina{
+
+.item-pagina {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,16 +73,18 @@ img{
     border-radius: 4px;
     overflow: hidden;
     cursor: pointer;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
     margin: 0 10px;
     text-align: center;
     transition: all 300ms;
-    
+
 }
-.item-pagina:hover{
+
+.item-pagina:hover {
     transform: scale(2);
 }
-.item-pagina img{
+
+.item-pagina img {
     display: inline-block;
     max-width: none;
     height: 100%;
@@ -71,41 +92,215 @@ img{
     opacity: 0;
     transition: all 300ms;
 }
-.item-pagina:hover img{
+
+.item-pagina:hover img {
     opacity: 1;
     transform: scale(1);
 }
-input[id="1"]:checked ~ .slide{
+
+input[id="1"]:checked~.slide {
     animation: none;
     transform: translate3d(0, 0, 0);
 }
-input[id="1"]:checked ~ .pagina .item-pagina[for="1"]{
+
+input[id="1"]:checked~.pagina .item-pagina[for="1"] {
     background: #fff;
 }
 
-input[id="2"]:checked ~ .slide{
+input[id="2"]:checked~.slide {
     animation: none;
     transform: translate3d(calc(-100% * 1), 0, 0);
 }
-input[id="2"]:checked ~ .pagina .item-pagina[for="2"]{
+
+input[id="2"]:checked~.pagina .item-pagina[for="2"] {
     background: #fff;
 }
 
-input[id="3"]:checked ~ .slide{
+input[id="3"]:checked~.slide {
     animation: none;
     transform: translate3d(calc(-100% * 2), 0, 0);
 }
-input[id="3"]:checked ~ .pagina .item-pagina[for="3"]{
+
+input[id="3"]:checked~.pagina .item-pagina[for="3"] {
     background: #fff;
 }
-@keyframes slide{
-    33%{
+
+@keyframes slide {
+    0% {
         transform: translate3d(calc(-100% * 0), 0, 0);
     }
-    66%{
+
+    35% {
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+
+    40% {
         transform: translate3d(calc(-100% * 1), 0, 0);
     }
-    100%{
+
+    75% {
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+
+    80% {
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+
+    100% {
         transform: translate3d(calc(-100% * 2), 0, 0);
     }
 }
+
+/* PARA FORM DE RESERVACION */
+
+
+.contenedor-reservacion {
+    background-color: #322B23;
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+}
+
+/* PARA EL TESTIMONIAL */
+
+.contenedor-testimonials *::after, *::before {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* height: 120px; */
+    box-sizing: border-box;
+}
+
+.contenedor-testimonials a {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.testimonials {
+    position: relative;
+    background-color: #1E1E1E;
+    padding: 2.3rem 1.5rem 2.5rem;
+    /* margin: 3rem 1.5rem; */
+    width: 100%;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.testimonials:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1.5rem;
+    border-top-color: #494949;
+    margin-left: -1.5rem;
+}
+
+.testimonials-title {
+    font-family: var(--fuente_2);
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #aa8667;
+    padding-bottom: 1.3rem;
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    line-height: 1.33;
+    font-family: serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #f9f9f9;
+}
+
+.testimonial cite {
+    display: block;
+    font-family: var(--fuente_3);
+    color: #bec4c7;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    font-style: normal;
+}
+
+.slides-t {
+    overflow: hidden;
+    padding-bottom: 3rem;
+    position: relative;
+}
+
+.slide-t {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: opacity .5s;
+}
+
+.slide-t:first-of-type,
+.slide-ctrl:nth-of-type(1):target~.slide-t:nth-of-type(1),
+.slide-ctrl:nth-of-type(2):target~.slide-t:nth-of-type(2),
+.slide-ctrl:nth-of-type(3):target~.slide-t:nth-of-type(3) {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.slide-ctrl:target~.slide-t {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.slides-ctrl {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.slide-btn {
+    background: #5a5c5d;
+    display: inline-block;
+    width: .83rem;
+    height: .83rem;
+    line-height: 1;
+    overflow: hidden;
+    margin: 0 .85rem;
+    -webkit-tap-highlight-color: transparent;
+    text-indent: 100%;
+    border-radius: 1px;
+}
+
+.slide-btn:hover,
+.slide-btn:focus {
+    background: #f9f9f9;
+}
+
+.slide-btn:first-of-type,
+.slide-ctrl:nth-of-type(1):target~.slides-ctrl .slide-btn:nth-of-type(1),
+.slide-ctrl:nth-of-type(2):target~.slides-ctrl .slide-btn:nth-of-type(2),
+.slide-ctrl:nth-of-type(3):target~.slides-ctrl .slide-btn:nth-of-type(3) {
+    background: #bcbcbc;
+    box-shadow: 0 0 0 4px #ad823e;
+}
+
+.slide-ctrl:target~.slides-ctrl .slide-btn {
+    background: #aa8667;
+    box-shadow: 0 0 0 3px #2d3138;
+}
+
+::-moz-selection {
+    background: rgba(173, 130, 62, .25);
+}
+
+::selection {
+    background: rgba(173, 130, 62, .25);
+}
+
+/*FINAL DEL TESTIMONIAL  */
