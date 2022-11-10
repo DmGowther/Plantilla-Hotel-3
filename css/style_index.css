@@ -159,7 +159,7 @@ input[id="3"]:checked~.pagina .item-pagina[for="3"] {
     box-sizing: border-box;
 }
 
-form {
+.contenedor-reservacion form {
     display: flex;
     position: relative;
     justify-content: center;
@@ -174,34 +174,71 @@ form {
     padding-top: 10px;
 }
 
-span {
+.contenedor-reservacion .formulario-reserv .rows span {
     color: #fff;
     font-family: var(--fuente_1);
+    font-weight: 800;
+    font-size: 1.2em;
 }
 
-select {
+.contenedor-reservacion .formulario-reserv .rows .inputBox select {
     background-color: #5f5243;
     width: 100px;
     height: 40px;
     color: #fff;
+    padding-inline-start: 10px;
+    font-family: var(--fuente_1);
+    font-weight: 500;
+    font-size: 0.9em;
     border: none;
-
 }
 
-input {
+.contenedor-reservacion .formulario-reserv .rows .inputBox input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    width: 15px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+#fecha {
+    padding: 10px !important;
+}
+
+.contenedor-reservacion .formulario-reserv .rows .inputBox input[type="date"] {
     background-color: #5f5243;
     width: 230px;
     height: 40px;
     color: #fff;
     border: none;
+    padding-inline-start: 10px;
+    font-family: var(--fuente_1);
+    font-weight: 500;
+    font-size: 0.9em;
 }
 
 .inputbutton {
     padding-top: 28px;
+    width: 230px;
+    height: 45px;
+    font-family: var(--fuente_1);
+    transition: all 600ms;
+}
+
+.buttonc:hover {
+    cursor: pointer;
+    color: rgb(214, 214, 214);
 }
 
 .buttonc {
+    transition: all 600ms step-start;
+    font-size: 1em;
+    font-weight: 550;
     background-color: #aa8667;
+    width: 230px;
+    height: 45px;
+    color: #fff;
+    border: none;
 }
 
 /*FINAL DEL FORM DE RESERVACION  */
@@ -421,7 +458,6 @@ hr {
 }
 
 .center {
-
     width: 100%;
     align-items: center;
     display: flex;
@@ -461,7 +497,7 @@ hr {
 }
 
 .card {
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     transition: all 800ms;
     animation-name: tarjeta_dez;
     animation-duration: 30s;
@@ -631,7 +667,8 @@ hr {
 
 .contenedor-vg>h2 {
     font-size: 2rem;
-    color: #aa8667;
+    color: #dad6d1;
+    /* color: #aa8667; */
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -694,7 +731,8 @@ hr {
     margin: 0 !important;
     padding: 16px 0 16px 48px;
     position: relative;
-    border-bottom: 1px solid #CCCCCC;
+    /* border-bottom: 1px solid #CCCCCC; */
+    border-bottom: 1px solid #a5a5a5;
 }
 
 .video-gallery>label:last-of-type {
@@ -702,7 +740,8 @@ hr {
 }
 
 .video-gallery>input[type="radio"]:checked+label {
-    color: #ffffff !important;
+    color: #aa8667 !important;
+    border-bottom: 1px solid #aa8667 !important;
 }
 
 .video-gallery>input[type="radio"]:checked+label:before {
