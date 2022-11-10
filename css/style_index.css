@@ -193,18 +193,6 @@ input[id="3"]:checked~.pagina .item-pagina[for="3"] {
     border: none;
 }
 
-.contenedor-reservacion .formulario-reserv .rows .inputBox input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-    width: 15px;
-    padding: 0px;
-    margin: 0px;
-    margin-top: 10px;
-}
-
-#fecha {
-    padding: 10px !important;
-}
-
 .contenedor-reservacion .formulario-reserv .rows .inputBox input[type="date"] {
     background-color: #5f5243;
     width: 230px;

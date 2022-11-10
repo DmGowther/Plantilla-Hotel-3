@@ -239,8 +239,20 @@ select {
     padding: 15px 15px;
 }
 
-.inputBox::placeholder {
+.inputBox, ::placeholder {
     color: rgba(153, 153, 153, 0.4);
+}
+
+.inputBox .sel {
+    color: rgb(165, 165, 165);
+}
+
+.inputBox .fecha_p {
+    color: rgb(165, 165, 165);
+}
+
+.inputBox .file_p {
+    color: rgb(165, 165, 165);
 }
 
 .inputBox input:focus {
