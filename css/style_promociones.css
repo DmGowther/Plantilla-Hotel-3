@@ -89,6 +89,10 @@ main {
     display: flex;
     position: relative;
     height: 990px;
+    margin-left: 55px;
+    /* estor margenes se agregaron para usar el boton flotante */
+    margin-right: 55px;
+    /* estor margenes se agregaron para usar el boton flotante */
     justify-content: center;
 }
 
