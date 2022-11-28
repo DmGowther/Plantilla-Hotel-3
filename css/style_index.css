@@ -266,7 +266,7 @@ input[id="3"]:checked~.pagina .item-pagina[for="3"] {
     font-family: var(--fuente_2);
 }
 
-hr {
+.column hr {
     background-color: #aa8667;
     width: 40px;
     height: 1px;
@@ -292,6 +292,14 @@ hr {
     /* height: 120px; */
     box-sizing: border-box;
 }
+
+
+/* .box__copyright hr {
+    width: 99%;
+    left: -14%;
+    position: relative;
+} */
+
 
 .contenedor-testimonials a {
     text-decoration: none;
